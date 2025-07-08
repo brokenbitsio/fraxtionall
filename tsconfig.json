@@ -7,7 +7,10 @@
       "path": "./apps/landing"
     },
     {
-      "path": "./shared"
+      "path": "./shared/theme"
+    },
+    {
+      "path": "./shared/query"
     }
   ]
 }

@@ -1,5 +1,8 @@
 {
   "name": "@fraxtionall/landing",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@fraxtionall/theme": "workspace:*"
+  }
 }

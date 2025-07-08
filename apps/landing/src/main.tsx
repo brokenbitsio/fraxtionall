@@ -2,6 +2,12 @@ import { StrictMode } from 'react';
 import { MantineProvider } from '@mantine/core';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
 import * as ReactDOM from 'react-dom/client';
+import { theme, shadcnCssVariableResolver } from '@fraxtionall/theme';
+import '../../../style.css';
+
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+const queryClient = new QueryClient();
 
 // All packages except `@mantine/hooks` require styles imports
 // Add them as we go
@@ -26,8 +32,14 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <StrictMode>
-    <MantineProvider>
-      <RouterProvider router={router} />
+    <MantineProvider
+      theme={theme}
+      cssVariablesResolver={shadcnCssVariableResolver}
+    >
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </MantineProvider>
   </StrictMode>
 );
