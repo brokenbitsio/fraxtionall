@@ -371,7 +371,7 @@ export const theme: MantineThemeOverride = createTheme({
   primaryShade: { light: 8, dark: 0 },
   autoContrast: true,
   luminanceThreshold: 0.3,
-  fontFamily: 'Geist',
+  fontFamily: 'Inter',
   radius: {
     xs: rem('6px'),
     sm: rem('8px'),
@@ -412,7 +412,7 @@ export const theme: MantineThemeOverride = createTheme({
   },
 
   headings: {
-    fontFamily: 'Geist',
+    fontFamily: 'Inter',
     sizes: {
       h1: {
         fontSize: rem('36px'),
