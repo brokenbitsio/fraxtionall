@@ -28,6 +28,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './index.module.css';
+import { Link } from '@tanstack/react-router';
 
 const mockdata = [
   {
@@ -93,7 +94,9 @@ export function Header() {
           <Title size={'lg'}>Fraxtionall</Title>
 
           <Group>
-            <Button variant="default">Log in</Button>
+            <Button component={Link} to="/auth/login" variant="default">
+              Log in
+            </Button>
             <Button>Sign up</Button>
           </Group>
         </Group>
