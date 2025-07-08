@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { MantineProvider } from '@mantine/core';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
 import * as ReactDOM from 'react-dom/client';
+import { theme } from '@fraxtionall/theme';
 
 // All packages except `@mantine/hooks` require styles imports
 // Add them as we go
